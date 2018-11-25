@@ -8,10 +8,10 @@ chrome.tabs.onUpdated.addListener(function(tabId) {
         if (u[2] == 'eksisozluk.com') {
             
             /*
-            * Şükela bugün butonuna otomatik tıklatma için sukela değerini 1 yapın.
+            * Şükela tümü butonuna otomatik tıklatma için sukela değerini 1 yapın.
             * Default: 0
             */
-            var sukela = 1;
+            var sukela = 0;
 
             chrome.tabs.executeScript(tab.id, {file: 'assets/js/jquery-3.3.1.min.js'}, function() {
                 if (sukela == 1) {
