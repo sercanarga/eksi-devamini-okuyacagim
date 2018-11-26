@@ -6,7 +6,7 @@ chrome.tabs.onUpdated.addListener(function(tabId) {
         };
         var u = tab.url.split('/');
         if (u[2] == 'eksisozluk.com') {
-            
+
             /*
             * Şükela tümü butonuna otomatik tıklatma için sukela değerini 1 yapın.
             * Default: 0
@@ -17,7 +17,7 @@ chrome.tabs.onUpdated.addListener(function(tabId) {
                 if (sukela == 1) {
                     chrome.tabs.executeScript(tab.id, {code: setup.clickAll + setup.clickNiceAll});
                 } else {
-                    chrome.tabs.executeScript(tab.id, {code: setup.clickNiceAll});
+                    chrome.tabs.executeScript(tab.id, {code: setup.clickAll});
                 }
             });
         }
