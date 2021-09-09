@@ -5,6 +5,7 @@
 body {
     margin: 0;
     padding: 0;
+    background-color: #1b1916;
 }
 
 .container {
@@ -19,23 +20,31 @@ body {
 
 .container > .head {
     text-align: center;
+    font-weight: bold;
+    font-size: 19px;
+    text-shadow: 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 .container > .head > .logo {
     width: 38%;
 }
 
-.container > .head {
-    font-weight: bold;
-    font-size: 19px;
-    text-shadow: 1px 2px rgba(0, 0, 0, 0.1);
+.container .panel {
+    text-align: center;
+    
 }
-.container > .head > .header {
+
+#fport {
+    color: orange;
+    font-size: 8px;
+}
+
+#eksi {
     color: #84c44e;
 }
 
-.container .panel {
-    text-align: center;
+#devam {
+    color: #ffffdc;
 }
 
 #gitS {
@@ -54,9 +63,4 @@ body {
 
 .zoom:hover {
   transform: scale(1.4); /* (120% zoom*/
-}
-
-#fport {
-    color: orange;
-    font-size: 8px;
 }
