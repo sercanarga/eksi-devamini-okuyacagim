@@ -22,7 +22,7 @@ body {
 }
 
 .container > .head > .logo {
-    width: 40%;
+    width: 38%;
 }
 
 .container > .head {
@@ -44,4 +44,14 @@ body {
 
 #gitO {
     margin-left: 90px;
+}
+
+.zoom {
+  width: 32px;
+  height: 32px;
+  transition: transform .2s; /* Animation */
+}
+
+.zoom:hover {
+  transform: scale(1.4); /* (120% zoom*/
 }
