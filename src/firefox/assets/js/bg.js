@@ -1,22 +1,23 @@
 chrome.tabs.onUpdated.addListener(function(tabId) {
     chrome.tabs.get(tabId, function(tab) {
-        var setup = {
+        const setup = {
             clickNiceAll: '$(".nice-mode-toggler a:first:not(.nice-on)")[0].click();',
-            clickAll: 'var op=setInterval(function(){if($(".read-more-link-wrapper a").length>0){$(".read-more-link-wrapper a")[0].click();}else{clearInterval(op);}});'
+            clickAll: 'const op=setInterval(function(){if($(".read-more-link-wrapper a").length>0){$(".read-more-link-wrapper a")[0].click();}else{clearInterval(op);}});'
         };
-        var u = tab.url.split('/');
+        const u = tab.url.split('/');
         if (u[2] == 'eksisozluk.com') {
 
             /*
             * Şükela tümü butonuna otomatik tıklatma için sukela değerini 1 yapın.
             * Default: 0
             */
-            var sukela = 0;
+            const sukela = 0;
 
             chrome.tabs.executeScript(tab.id, {file: 'assets/js/jquery-3.3.1.min.js'}, function() {
                 if (sukela == 1) {
                     chrome.tabs.executeScript(tab.id, {code: setup.clickAll + setup.clickNiceAll});
-                } else {
+                } 
+                else {
                     chrome.tabs.executeScript(tab.id, {code: setup.clickAll});
                 }
             });
