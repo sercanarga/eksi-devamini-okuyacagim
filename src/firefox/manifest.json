@@ -1,0 +1,20 @@
+{
+    "name": "ekşi sözlük devamını okuyacağım!",
+    "version": "1.0",
+    "manifest_version": 2,
+    "description": "ekşi sözlük'te devamını okuyayım özelliğini kaldırma aracı",
+    
+    "browser_action": {
+        "default_icon": "assets/img/icon.png",
+        "default_popup": "app.html"
+    },
+
+    "background": {
+        "scripts": ["assets/js/jquery-3.3.1.min.js", "assets/js/bg.js"]
+    },
+    
+    "permissions": [
+        "tabs",
+        "*://*.eksisozluk.com/*"
+    ]
+}
