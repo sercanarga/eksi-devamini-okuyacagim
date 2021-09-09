@@ -37,3 +37,11 @@ body {
 .container .panel {
     text-align: center;
 }
+
+#gitS {
+    margin-right: 90px;
+}
+
+#gitO {
+    margin-left: 90px;
+}
